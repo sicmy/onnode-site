@@ -2,8 +2,9 @@
 
 온노드(OnNode)의 정적 회사 소개 사이트입니다. 빌드 과정 없이 HTML 파일과 CSS 파일 하나로 되어 있으며, GitHub Pages에 그대로 올려 서비스합니다.
 
-- 처음 주소: `https://sicmy.github.io/onnode-site/`
-- 나중 주소: `https://www.onnode.co.kr/`
+- 주소: `https://www.onnode.co.kr/` (2026-11-09 연결, `onnode.co.kr`은 www로 자동 이동)
+- DNS: 호스팅케이알 — `@` A 185.199.108–111.153, `www` CNAME `sicmy.github.io`, 도메인 인증 TXT `_github-pages-challenge-sicmy`
+- `CNAME` 파일은 GitHub Pages 설정이 관리한다. 지우지 말 것. 예전 주소 `https://sicmy.github.io/onnode-site/`는 새 주소로 이동한다
 
 두 주소에서 모두 동작하도록 **모든 내부 링크와 파일 경로는 상대 경로**로 작성했습니다. 새 페이지를 추가할 때도 `/`로 시작하는 절대 경로를 쓰지 마세요.
 
