@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>원투동 지원 · 자주 묻는 질문 (초안) | 온노드 OnNode</title>
+<meta name="description" content="원투동 – 베트남 돈 계산기 앱의 사용 안내와 문의 방법입니다.">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#121417" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="온노드 OnNode">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:title" content="원투동 지원 · 자주 묻는 질문 (초안) | 온노드 OnNode">
+<meta property="og:description" content="원투동 – 베트남 돈 계산기 앱의 사용 안내와 문의 방법입니다.">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="../../../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="../../../assets/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">본문 바로가기</a>
+<header class="site-header">
+  <div class="container">
+    <a class="wordmark" href="../../../"><span class="wordmark-dot" aria-hidden="true"></span>OnNode<span class="sr-only"> 홈</span></a>
+    <nav class="site-nav" aria-label="주 메뉴">
+      <ul>
+        <li><a href="../../../solutions/">솔루션</a></li>
+        <li><a href="../../../apps/wontodong/" aria-current="page">앱</a></li>
+        <li><a href="../../../quote/" class="nav-quote">견적 요청</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main" tabindex="-1">
+<div class="container">
+  <header class="page-head">
+    <nav class="crumbs" aria-label="이동 경로">
+      <ol>
+        <li><a href="../">원투동</a></li>
+        <li aria-current="page">지원</li>
+      </ol>
+    </nav>
+    <h1>원투동 지원 · 자주 묻는 질문 (초안)</h1>
+  </header>
+  <div class="prose">
+    <p>원투동은 베트남 계산대 앞에서 어떤 지폐를 내고 거스름돈을 어떻게 받을지 알려 주는 현금 여행 계산기입니다. 궁금한 점은 아래에서 먼저 찾아보시고, 해결되지 않으면 <a href="#문의하기">문의하기</a>로 연락해 주세요.</p>
+    <hr>
+    <h2 id="환율">환율</h2>
+    <h3 id="환율은-어디서-가져오나요-기준-시각은-언제인가요">환율은 어디서 가져오나요? 기준 시각은 언제인가요?</h3>
+    <ul>
+    <li>무료 공개 환율 서비스 두 곳에서 원화(KRW) 기준 환율을 받아옵니다. 먼저 <strong>ExchangeRate-API</strong>(<code>open.er-api.com</code>)에 묻고, 실패하면 <strong>fawazahmed0 Currency API</strong>(jsDelivr CDN)를 씁니다.</li>
+    <li>두 서비스 모두 <strong>보통 하루 한 번</strong> 갱신되는 참고값입니다. 분 단위 실시간 환율이 아닙니다.</li>
+    <li>환율 아래 작은 글씨에 <strong>기준 시각과 출처</strong>가 항상 나옵니다. 앱은 마지막으로 받은 지 6시간이 지나야 다시 묻습니다. 바로 다시 받고 싶으면 <code>[새로고침]</code>을 누르세요.</li>
+    <li>환율이 오래되면 이렇게 알려 드립니다.
+    <ul>
+    <li>24시간 이내: 따로 표시하지 않음</li>
+    <li>1~7일: 회색 배지 <code>11/09 기준</code></li>
+    <li>7일 넘음: 주황색 안내 <code>환율이 오래됐어요 · 환전소 환율로 고치기</code></li>
+    </ul></li>
+    </ul>
+    <h3 id="왜-실제-환전소-은행-환율과-다른가요">왜 실제 환전소·은행 환율과 다른가요?</h3>
+    <ul>
+    <li>앱의 환율은 시장 환율에 가까운 <strong>기준값</strong>입니다. 환전소와 은행은 여기에 자기 마진(수수료)을 붙이고, 고액권이냐 소액권이냐, 어느 장소냐에 따라서도 환율이 달라집니다.</li>
+    <li>그래서 원투동은 <strong>기준 금액과 수수료를 따로</strong> 보여 줍니다. 환전할 때 <code>환전 추가</code>에 낸 원화와 받은 동을 넣으면, 기준 환율로 계산한 금액과 실제 받은 금액의 차이(수수료)가 원·동·%로 나옵니다.</li>
+    <li>실제로 받은 환율로 계산하고 싶으면 환율 영역을 눌러 <strong>직접 입력</strong>하세요(<code>100₫당 원</code> 또는 <code>1원당 ₫</code>). 환전 기록을 저장한 뒤 "이 환율을 앱 환율로 쓸까요?"에서 <code>[사용]</code>을 눌러도 됩니다. <code>[API 환율로 되돌리기]</code>를 누르기 전까지 그 환율이 유지됩니다.</li>
+    <li>앱의 환율은 참고용입니다. 실제 거래 금액은 환전소·가게에서 확인해 주세요.</li>
+    </ul>
+    <h3 id="인터넷이-없어도-쓸-수-있나요">인터넷이 없어도 쓸 수 있나요?</h3>
+    <ul>
+    <li>네. 한 번 받아 둔 환율로 계산·추천·기록이 <strong>모두 오프라인에서 동작</strong>합니다. 오프라인이면 기준 시각 줄에 <code>오프라인</code>이 함께 표시됩니다.</li>
+    <li>설치하고 <strong>처음 여는데 인터넷이 없어도</strong>, 앱에 담겨 있는 환율로 바로 계산할 수 있습니다. 이때는 <code>앱 설치 시점 환율</code> 배지가 붙고, 인터넷이 연결되면 자동으로 최신 환율로 바뀝니다. 공항에서 처음 열 때를 대비해, 가능하면 출국 전에 한 번 열어 환율을 받아 두세요.</li>
+    </ul>
+    <hr>
+    <h2 id="거스름돈-지폐">거스름돈 · 지폐</h2>
+    <h3 id="지폐가-헷갈린다는-경고는-뭔가요">지폐가 헷갈린다는 경고는 뭔가요?</h3>
+    <p>베트남 지폐 중에는 색이 비슷해 자주 헷갈리는 쌍이 있습니다.</p>
+    <ul>
+    <li><strong>50만동(500,000₫) ↔ 2만동(20,000₫)</strong>: 둘 다 파란 계열</li>
+    <li><strong>20만동(200,000₫) ↔ 1만동(10,000₫)</strong>: 둘 다 붉은 계열</li>
+    </ul>
+    <p>추천 카드나 지갑에 이 지폐가 나오면 칩 옆에 주의 표시가 붙습니다. 낼 때 지폐의 <strong>0 개수</strong>와 칩의 <strong>한글 단위</strong>(<code>50만</code>, <code>2만</code>)를 한 번 더 확인하세요. 50만동을 2만동으로 알고 내면 48만동을 더 내게 됩니다.</p>
+    <h3 id="낼-지폐-추천은-어떻게-정해지나요">낼 지폐 추천은 어떻게 정해지나요?</h3>
+    <p>낼 돈을 입력하면 <strong>내 지갑에 있는 지폐로</strong> 낼 수 있는 조합을 최대 3가지 보여 드립니다.</p>
+    <ol>
+    <li><strong>거스름돈 최소</strong>: 거스름돈을 가장 적게 받는 조합</li>
+    <li><strong>지폐 장수 최소</strong>: 가장 적은 장수로 내는 조합</li>
+    <li><strong>잔돈 털기</strong>: 작은 지폐를 최대한 써서 지갑을 가볍게 하는 조합</li>
+    </ol>
+    <p>겹치는 조합은 하나만 보여 드리고, 마지막 카드는 <code>직접 입력</code>입니다. 지갑 금액이 모자라면 "지갑 금액이 부족합니다"와 함께 지갑과 상관없는 일반 추천을 보여 드리니, 지갑 장수를 먼저 고쳐 주세요.</p>
+    <h3 id="받을-거스름돈은-어떻게-예상하나요">받을 거스름돈은 어떻게 예상하나요?</h3>
+    <p>가게에서 흔히 주는 방식 3가지를 보여 드립니다.</p>
+    <ol>
+    <li><strong>장수 최소</strong>: 큰 지폐부터 채우는 방식</li>
+    <li><strong>큰 지폐 1장 쪼개기</strong>: 가장 큰 지폐 한 장을 작은 지폐로 나눈 방식</li>
+    <li><strong>소액권 위주</strong>: 1만동 이하 지폐로 주는 방식</li>
+    </ol>
+    <p>10장이 넘는 조합과 꺼 둔 권종은 빼고, 실제 받은 것과 같은 카드를 고르면 됩니다. 맞는 카드가 없으면 <code>직접 입력</code>에서 받은 지폐를 고르세요. 덜 받았거나 더 받았거나 팁으로 줬다면 그 차액도 기록할 수 있습니다.</p>
+    <h3 id="500동-200동은-왜-안-보이나요">500동·200동은 왜 안 보이나요?</h3>
+    <p>500₫·200₫는 실제로 거의 쓰이지 않아서 <strong>기본으로 꺼져 있습니다.</strong> 쓰려면 설정에서 <code>소액권(500₫, 200₫) 사용</code>을 켜세요. 꺼져 있어도 지갑에 1장 이상 있으면 지갑에는 계속 보입니다. 1,000₫ 이상 지폐는 항상 사용합니다.</p>
+    <h3 id="금액-끝자리가-지폐로-낼-수-없는-숫자예요">금액 끝자리가 지폐로 낼 수 없는 숫자예요</h3>
+    <p>예를 들어 끝자리가 1~999₫이면 지폐만으로 딱 맞게 낼 수 없습니다. 이때는 앱이 경고를 보여 줍니다. 가게에서 실제로 받은 금액을 확인한 뒤 입력해 주세요.</p>
+    <h3 id="저장을-잘못-눌렀어요">저장을 잘못 눌렀어요</h3>
+    <p>저장 직후 아래에 나오는 안내에서 <strong>5초 안에 <code>[되돌리기]</code></strong>를 누르면 기록이 지워지고 지갑도 원래대로 돌아갑니다. 시간이 지났다면 여행 가계부에서 그 기록을 눌러 수정하거나 삭제하세요. 삭제할 때 "지갑 금액도 되돌릴까요?"를 묻습니다.</p>
+    <hr>
+    <h2 id="지갑-가계부">지갑 · 가계부</h2>
+    <h3 id="앱의-지갑과-실제-현금이-달라요">앱의 지갑과 실제 현금이 달라요</h3>
+    <ul>
+    <li>거스름돈 탭 아래의 지갑 요약(또는 가계부의 <code>내 자산</code>)을 눌러 <strong>권종별 장수를 바로 고칠 수 있습니다.</strong></li>
+    <li>고치면 사유를 고르는 창이 나옵니다(분실·팁·선물·기록 누락·직접 입력). 건너뛰어도 됩니다. 바뀐 만큼은 가계부에 <code>수동 추가</code> 또는 <code>수동 차감</code> 기록으로 남아서, 지갑과 가계부가 항상 일치합니다.</li>
+    <li>자주 어긋난다면, 환전한 돈을 <code>환전 추가</code>로 기록했는지와 지불을 앱으로 저장했는지 확인해 주세요.</li>
+    </ul>
+    <h3 id="여행이-끝나면-어떻게-하나요">여행이 끝나면 어떻게 하나요?</h3>
+    <p><mark class="todo">[확인 필요 — PRD §10.3-a]</mark> 현재 버전에는 <code>여행 종료</code> 버튼이 없습니다. 다음 여행을 만들면 이전 여행은 <strong>읽기 전용으로 보관</strong>되고, 가계부 상단의 <code>[현재 여행 ▾]</code>에서 언제든 다시 볼 수 있습니다. 보관된 여행의 기록은 수정·삭제할 수 없습니다.</p>
+    <h3 id="데이터가-백업되나요-휴대폰을-바꾸면요">데이터가 백업되나요? 휴대폰을 바꾸면요?</h3>
+    <ul>
+    <li>원투동은 회원가입과 서버가 없어서 <strong>앱이 직접 백업하거나 다른 휴대폰으로 옮기지 않습니다.</strong> 기록은 지금 쓰는 휴대폰에만 있습니다.</li>
+    <li><mark class="todo">[확인 필요 — PRD §10.3-b]</mark> 앱을 삭제하면 기록도 함께 지워집니다. <em>(Android 자동 백업을 켜 두기로 결정하면 이렇게 바꾼다: "휴대폰의 Google 백업이 켜져 있으면 같은 Google 계정의 새 휴대폰에 앱을 설치할 때 기록이 복원될 수 있습니다. 다만 항상 복원된다고 보장하지는 않습니다.")</em></li>
+    <li>내보내기(CSV 등)는 아직 없습니다.</li>
+    </ul>
+    <h3 id="위치를-수집하나요-광고나-가입이-있나요">위치를 수집하나요? 광고나 가입이 있나요?</h3>
+    <ul>
+    <li>현재 버전은 <strong>위치를 수집하지 않고</strong> 위치 권한도 묻지 않습니다.</li>
+    <li><strong>광고, 회원가입, 인앱결제가 없습니다.</strong></li>
+    <li>자세한 내용은 <a href="../privacy/">개인정보처리방침</a>을 확인하세요.</li>
+    </ul>
+    <h3 id="카드-결제도-기록할-수-있나요">카드 결제도 기록할 수 있나요?</h3>
+    <p>아니요. 원투동은 <strong>현금(베트남 동) 전용</strong> 가계부입니다. 카드·그랩 결제·계좌이체는 기록하지 않습니다.</p>
+    <h3 id="글자가-너무-크거나-작아요">글자가 너무 크거나 작아요</h3>
+    <p>휴대폰의 글자 크기 설정을 따르며, 계산대 화면이 깨지지 않도록 <strong>최대 1.3배</strong>까지 커집니다. 다크 모드도 휴대폰 설정을 따릅니다.</p>
+    <hr>
+    <h2 id="직접-설치apk-테스터">직접 설치(APK) 테스터</h2>
+    <h3 id="apk는-어떻게-설치하나요">APK는 어떻게 설치하나요?</h3>
+    <ol>
+    <li>휴대폰 브라우저로 <strong><a href="https://apps.sicmy.com/wontodong/">https://apps.sicmy.com/wontodong/</a></strong> 에 들어가 <code>latest.apk</code>를 받습니다.</li>
+    <li>받은 파일을 열고, "출처를 알 수 없는 앱" 설치를 허용하라는 안내가 나오면 그 브라우저(또는 파일 앱)에 <strong>이 출처 허용</strong>을 켭니다.</li>
+    <li><code>설치</code>를 누릅니다. Play 프로텍트 경고가 나오면 내용을 확인한 뒤 설치를 계속합니다.</li>
+    </ol>
+    <p>새 버전이 나오면 환율 탭 위에 <code>새 버전 x.y.z · 받기</code>가 표시됩니다. 같은 방법으로 받아 <strong>기존 앱 위에 설치</strong>하면 기록이 그대로 유지됩니다. 자세한 순서와 문제 해결은 사이드로드 설치 안내를 보세요.</p>
+    <hr>
+    <h2 id="문제-신고-문의">문제 신고 · 문의</h2>
+    <h3 id="문제를-어떻게-신고하나요">문제를 어떻게 신고하나요?</h3>
+    <ol>
+    <li>앱의 <strong>설정 &gt; 문제 신고하기</strong>를 누릅니다.</li>
+    <li>공유 창이 열리면 카카오톡·텔레그램·메일 중 하나를 골라 개발자에게 보냅니다.</li>
+    <li>자동으로 들어간 진단 정보(앱 버전·기기 모델·OS 버전·현재 화면·최근 오류 종류) 아래에 <strong>무슨 일이 있었는지</strong> 적어 주세요.</li>
+    </ol>
+    <p>진단 정보에는 금액·메모·여행 이름·지갑 내용·위치가 들어가지 않습니다. 보내기 전에 화면에서 내용을 확인할 수 있습니다.</p>
+    <p><strong>계산이 틀렸다면</strong> 가장 먼저 고칩니다. 다음 정보를 같이 보내 주시면 빨리 재현할 수 있습니다.</p>
+    <ul>
+    <li>입력한 금액(예: 낼 돈 65,000₫)</li>
+    <li>그때 지갑의 권종별 장수(지갑 화면 스크린샷이면 충분합니다)</li>
+    <li>앱이 보여 준 추천·거스름돈 화면의 스크린샷과, 맞다고 생각하는 결과</li>
+    <li>환율 문제라면 환율 영역(기준 시각·출처·<code>수동</code> 표시가 보이게)의 스크린샷</li>
+    </ul>
+    <h3 id="문의하기">문의하기</h3>
+    <ul>
+    <li>이메일: <strong><a href="mailto:oonnode@gmail.com">oonnode@gmail.com</a></strong></li>
+    <li>운영: 온노드(OnNode)</li>
+    <li>테스터는 초대받은 메신저 대화방으로 보내셔도 됩니다.</li>
+    </ul>
+  </div>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <a class="wordmark" href="../../../"><span class="wordmark-dot" aria-hidden="true"></span>OnNode<span class="sr-only"> 홈</span></a>
+      <nav class="footer-nav" aria-label="하단 메뉴">
+        <ul>
+          <li><a href="../../../solutions/">솔루션</a></li>
+          <li><a href="../../../quote/">견적 요청</a></li>
+          <li><a href="../../../apps/wontodong/">원투동</a></li>
+          <li><a href="../../../apps/wontodong/support/">원투동 지원</a></li>
+          <li><a href="../../../apps/wontodong/privacy/">원투동 개인정보처리방침</a></li>
+        </ul>
+      </nav>
+    </div>
+    <h2 class="sr-only">사업자 정보</h2>
+    <dl class="biz">
+      <div><dt>회사명</dt><dd>온노드 (OnNode)</dd></div>
+      <div><dt>대표</dt><dd>오해란</dd></div>
+      <div><dt>사업자등록번호</dt><dd class="num">447-32-01209</dd></div>
+      <div><dt>주소</dt><dd>서울특별시 서대문구 북아현로 90-7, 2층(북아현동)</dd></div>
+      <div><dt>전화</dt><dd class="num">000-0000-0000</dd></div>
+      <div><dt>이메일</dt><dd><a href="mailto:oonnode@gmail.com">oonnode@gmail.com</a></dd></div>
+      <div><dt>업태</dt><dd>도매 및 소매업, 임대서비스업</dd></div>
+      <div><dt>종목</dt><dd>컴퓨터 및 주변장치, 소프트웨어 도매업</dd></div>
+    </dl>
+    <p class="copyright"><small>&copy; 2026 OnNode.</small></p>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>견적 요청 | 온노드 OnNode</title>
+<meta name="description" content="온노드 제품 공급, 기능 개발, 시스템 구축과 기술지원 견적을 이메일로 요청하실 수 있습니다.">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#121417" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="온노드 OnNode">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:title" content="견적 요청 | 온노드 OnNode">
+<meta property="og:description" content="온노드 제품 공급, 기능 개발, 시스템 구축과 기술지원 견적을 이메일로 요청하실 수 있습니다.">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">본문 바로가기</a>
+<header class="site-header">
+  <div class="container">
+    <a class="wordmark" href="../"><span class="wordmark-dot" aria-hidden="true"></span>OnNode<span class="sr-only"> 홈</span></a>
+    <nav class="site-nav" aria-label="주 메뉴">
+      <ul>
+        <li><a href="../solutions/">솔루션</a></li>
+        <li><a href="../apps/wontodong/">앱</a></li>
+        <li><a href="../quote/" class="nav-quote" aria-current="page">견적 요청</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="main" tabindex="-1">
+<div class="container">
+  <header class="page-head">
+    <h1>견적 요청</h1>
+    <p class="lead">제품 공급, 기능 개발, 시스템 구축과 기술지원 견적을 요청하실 수 있습니다.</p>
+  </header>
+  <div class="quote-layout">
+    <section class="notice" aria-labelledby="notice-title">
+      <h2 class="notice-title" id="notice-title"><span class="led" aria-hidden="true"></span>온라인 접수는 준비 중입니다. 아래 항목을 이메일로 보내 주세요.</h2>
+      <p class="selected-item" id="selected-item" hidden>선택한 항목: <strong></strong></p>
+      <a class="btn btn-primary" id="mail-link" href="mailto:oonnode@gmail.com?subject=%5B%EA%B2%AC%EC%A0%81%20%EC%9A%94%EC%B2%AD%5D&amp;body=%EC%9A%94%EC%B2%AD%EC%9E%90%3A%20%0D%0A%ED%9A%8C%EC%82%AC%3A%20%0D%0A%EC%A0%84%ED%99%94%EB%B2%88%ED%98%B8%3A%20%0D%0A%EC%9D%B4%EB%A9%94%EC%9D%BC%3A%20%0D%0A%ED%95%AD%EB%AA%A9%3A%20%0D%0A%EB%82%B4%EC%9A%A9%3A%20%0D%0A">이메일로 견적 요청</a>
+      <div class="notice-detail">
+        <p>받는 주소: <a href="mailto:oonnode@gmail.com">oonnode@gmail.com</a></p>
+        <p>메일 제목: [견적 요청]</p>
+        <p>버튼을 눌러도 메일 앱이 열리지 않으면 위 주소로 직접 보내 주세요.</p>
+      </div>
+      <div class="mail-template">
+        <p>메일에 적어 주실 항목</p>
+        <ul>
+          <li>요청자</li>
+          <li>회사</li>
+          <li>전화번호</li>
+          <li>이메일</li>
+          <li>항목</li>
+          <li>내용</li>
+        </ul>
+      </div>
+    </section>
+
+    <form class="quote-form" aria-describedby="form-hint" novalidate>
+      <fieldset class="form-preview" disabled>
+        <legend>온라인 견적 요청 양식 (준비 중)</legend>
+        <p class="form-hint" id="form-hint">이 양식은 아직 접수되지 않습니다. 같은 내용을 이메일로 보내 주세요.</p>
+        <div class="form-grid">
+          <div class="field">
+            <label for="q-name">요청자</label>
+            <input id="q-name" name="name" type="text" autocomplete="name">
+          </div>
+          <div class="field">
+            <label for="q-company">회사</label>
+            <input id="q-company" name="company" type="text" autocomplete="organization">
+          </div>
+          <div class="field">
+            <label for="q-phone">전화번호</label>
+            <input id="q-phone" name="phone" type="tel" autocomplete="tel">
+          </div>
+          <div class="field">
+            <label for="q-email">이메일</label>
+            <input id="q-email" name="email" type="email" autocomplete="email">
+          </div>
+          <div class="field field-full">
+            <label for="q-item">항목</label>
+            <select id="q-item" name="item">
+              <option value="">항목을 선택하세요</option>
+              <optgroup label="라이브러리">
+                <option value="hwp-core-library">HWP Core Library by OnNode</option>
+                <option value="fastreport-hancom-exports">FastReport Hancom Exports by OnNode</option>
+                <option value="delphi-custom-development">Delphi 기능 개발 요청</option>
+                <option value="beautiful-ui-system">Beautiful UI System</option>
+                <option value="beautiful-ui-components">Beautiful UI Components</option>
+                <option value="onnode-grid">OnNode Grid</option>
+                <option value="onnode-upload">OnNode Upload</option>
+              </optgroup>
+              <optgroup label="OnNode 이음">
+                <option value="alt-text-system">OnNode 이음 – Alt Text System</option>
+              </optgroup>
+              <optgroup label="APM">
+                <option value="onnode-pulse">OnNode Pulse</option>
+              </optgroup>
+              <optgroup label="UI Builder">
+                <option value="ev-ide">EV IDE (Enterprise Visual IDE)</option>
+              </optgroup>
+              <optgroup label="OTP">
+                <option value="onnode-otp-simple">OnNode OTP – Simple OTP Library</option>
+                <option value="onnode-otp-enterprise">OnNode OTP – Enterprise OTP System</option>
+              </optgroup>
+              <optgroup label="Reporting Tool">
+                <option value="onnode-report-viewer">OnNode Report – Viewer</option>
+                <option value="onnode-report-designer">OnNode Report – Designer</option>
+                <option value="onnode-report-data-api">OnNode Report – Data API Server (API)</option>
+                <option value="onnode-report-server">OnNode Report – Reporting Server (Web, JavaScript, Java)</option>
+              </optgroup>
+              <optgroup label="서버접근제어">
+                <option value="onnode-gate">OnNode Gate</option>
+              </optgroup>
+              <optgroup label="오픈소스·협업 솔루션 구축/지원">
+                <option value="gitlab">GitLab 구축/지원</option>
+                <option value="jira-confluence-bitbucket">Jira / Confluence / Bitbucket 구축/지원</option>
+                <option value="mattermost">Mattermost 구축/지원</option>
+                <option value="warpgate">Warpgate 구축/지원</option>
+                <option value="kubernetes">Kubernetes 구축/지원</option>
+                <option value="proxmox">Proxmox 구축/지원</option>
+                <option value="rustdesk">RustDesk 구축/지원</option>
+                <option value="redis-kafka">Redis / Kafka 구축/지원</option>
+              </optgroup>
+              <optgroup label="기술지원">
+                <option value="support-pack-1m">오픈소스 기술지원 서비스팩 (1개월)</option>
+                <option value="support-pack-1y">오픈소스 기술지원 서비스팩 (1년)</option>
+                <option value="open-source-system-build">오픈소스를 이용한 시스템 구축</option>
+              </optgroup>
+              <option value="other">기타 / 아직 정하지 않음</option>
+            </select>
+          </div>
+          <div class="field field-full">
+            <label for="q-message">내용</label>
+            <textarea id="q-message" name="message" rows="6"></textarea>
+          </div>
+        </div>
+        <div class="actions">
+          <button class="btn" type="submit">온라인 접수 준비 중</button>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <a class="wordmark" href="../"><span class="wordmark-dot" aria-hidden="true"></span>OnNode<span class="sr-only"> 홈</span></a>
+      <nav class="footer-nav" aria-label="하단 메뉴">
+        <ul>
+          <li><a href="../solutions/">솔루션</a></li>
+          <li><a href="../quote/">견적 요청</a></li>
+          <li><a href="../apps/wontodong/">원투동</a></li>
+          <li><a href="../apps/wontodong/support/">원투동 지원</a></li>
+          <li><a href="../apps/wontodong/privacy/">원투동 개인정보처리방침</a></li>
+        </ul>
+      </nav>
+    </div>
+    <h2 class="sr-only">사업자 정보</h2>
+    <dl class="biz">
+      <div><dt>회사명</dt><dd>온노드 (OnNode)</dd></div>
+      <div><dt>대표</dt><dd>오해란</dd></div>
+      <div><dt>사업자등록번호</dt><dd class="num">447-32-01209</dd></div>
+      <div><dt>주소</dt><dd>서울특별시 서대문구 북아현로 90-7, 2층(북아현동)</dd></div>
+      <div><dt>전화</dt><dd class="num">000-0000-0000</dd></div>
+      <div><dt>이메일</dt><dd><a href="mailto:oonnode@gmail.com">oonnode@gmail.com</a></dd></div>
+      <div><dt>업태</dt><dd>도매 및 소매업, 임대서비스업</dd></div>
+      <div><dt>종목</dt><dd>컴퓨터 및 주변장치, 소프트웨어 도매업</dd></div>
+    </dl>
+    <p class="copyright"><small>&copy; 2026 OnNode.</small></p>
+  </div>
+</footer>
+<script>
+(function () {
+  var slug = new URLSearchParams(window.location.search).get("item");
+  if (!slug) return;
+  var select = document.getElementById("q-item");
+  var option = null;
+  for (var i = 0; i < select.options.length; i++) {
+    if (select.options[i].value === slug) { option = select.options[i]; break; }
+  }
+  if (!option || !option.value) return;
+  select.value = option.value;
+  var label = option.textContent;
+  var shown = document.getElementById("selected-item");
+  shown.querySelector("strong").textContent = label;
+  shown.hidden = false;
+  var lines = ["요청자: ", "회사: ", "전화번호: ", "이메일: ", "항목: " + label, "내용: "];
+  document.getElementById("mail-link").href = "mailto:oonnode@gmail.com?subject=" +
+    encodeURIComponent("[견적 요청] " + label) + "&body=" + encodeURIComponent(lines.join("\r\n") + "\r\n");
+})();
+</script>
+</body>
+</html>
